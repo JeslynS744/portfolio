@@ -22,17 +22,34 @@ export async function GET() {
       fs.mkdirSync(publicCertDir, { recursive: true });
     }
 
-    // Auto-sync any files from root certificates folder to public/certificates
+    // Auto-sync files from root certificates folder to public/certificates (including deletions)
     if (fs.existsSync(rootCertDir)) {
-      const rootFiles = fs.readdirSync(rootCertDir);
-      for (const file of rootFiles) {
+      const rootFiles = new Set(fs.readdirSync(rootCertDir));
+      
+      // Copy new/updated files
+      for (const file of Array.from(rootFiles)) {
         const srcPath = path.join(rootCertDir, file);
         const destPath = path.join(publicCertDir, file);
-        if (fs.statSync(srcPath).isFile()) {
+        if (fs.existsSync(srcPath) && fs.statSync(srcPath).isFile()) {
           try {
             fs.copyFileSync(srcPath, destPath);
           } catch (e) {
             // ignore copy lock
+          }
+        }
+      }
+
+      // Remove deleted files from public/certificates
+      const existingPublicFiles = fs.readdirSync(publicCertDir);
+      for (const file of existingPublicFiles) {
+        if (!rootFiles.has(file)) {
+          const toDelete = path.join(publicCertDir, file);
+          try {
+            if (fs.existsSync(toDelete) && fs.statSync(toDelete).isFile()) {
+              fs.unlinkSync(toDelete);
+            }
+          } catch (e) {
+            // ignore
           }
         }
       }
