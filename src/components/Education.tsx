@@ -129,7 +129,7 @@ export default function Education() {
               <div className="p-4 rounded-xl bg-canvas-subtle border border-ink-border space-y-2">
                 <span className="text-xs font-bold text-black block">Award Criteria &amp; Distinction:</span>
                 <p className="text-xs sm:text-sm text-ink-muted leading-relaxed font-normal">
-                  Awarded for highest academic distinction (<strong className="text-black font-semibold">9.27 CGPA</strong>), technical leadership, and outstanding capstone delivery in the Department of Computer Systems and Design.
+                  Awarded for highest academic distinction (<strong className="text-black font-semibold">9.27 CGPA</strong>) and overall excellence in the Department of Computer Systems and Design.
                 </p>
               </div>
 

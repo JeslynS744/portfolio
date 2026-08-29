@@ -23,9 +23,9 @@ export default function Certifications() {
       domain: 'Institutional Honor & Academic Leadership',
       icon: Trophy,
       isHonor: true,
-      skills: ['Academic Excellence', 'Technical Leadership', '9.27 CGPA', 'Computer Systems & Design'],
+      skills: ['Academic Excellence', '9.27 CGPA', 'Computer Systems & Design'],
       description:
-        'Awarded premier institutional recognition for outstanding academic performance, exemplary project delivery, and leadership in the Department of Computer Systems and Design at PSG Tech.',
+        'Awarded premier institutional recognition for outstanding academic performance (9.27 CGPA) and overall excellence in the Department of Computer Systems and Design at PSG Tech.',
     },
     {
       id: 'infosys-springboard',
