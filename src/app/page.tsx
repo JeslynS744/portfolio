@@ -8,6 +8,7 @@ import Projects from '@/components/Projects';
 import Blog from '@/components/Blog';
 import Skills from '@/components/Skills';
 import Education from '@/components/Education';
+import Certifications from '@/components/Certifications';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import ResumeModal from '@/components/ResumeModal';
@@ -24,6 +25,7 @@ export default function Home() {
       <Blog />
       <Skills />
       <Education />
+      <Certifications />
       <Contact />
       <Footer />
       <ResumeModal isOpen={resumeOpen} onClose={() => setResumeOpen(false)} />

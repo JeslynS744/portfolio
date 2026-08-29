@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Copy, Check, ArrowRight, BookOpen, Code2, Database, Cpu, Award } from 'lucide-react';
+import { Mail, Phone, MapPin, Copy, Check, ArrowRight, BookOpen, Code2, Database, Cpu, Award, Download } from 'lucide-react';
 import { useApp } from '@/app/providers';
 
 export default function Hero() {
@@ -110,6 +110,15 @@ export default function Hero() {
               >
                 <span>View Projects</span>
                 <ArrowRight className="w-4 h-4" />
+              </a>
+
+              <a
+                href="/resume/Jeslyn_Nivedhitha_S_Resume.pdf"
+                download="Jeslyn_Nivedhitha_S_Resume.pdf"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-canvas-subtle text-black font-bold text-xs sm:text-sm uppercase tracking-wider border border-ink-border transition-all"
+              >
+                <Download className="w-4 h-4" />
+                <span>Resume</span>
               </a>
 
               <a
