@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "sync": "node scripts/sync-assets.js",
+    "predev": "node scripts/sync-assets.js",
     "dev": "next dev",
+    "prebuild": "node scripts/sync-assets.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
