@@ -251,7 +251,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 <div className="bg-canvas-subtle p-4 rounded-xl border border-ink-border">
                   <div className="flex justify-between items-start">
                     <h3 className="font-bold text-black">PSG College of Technology</h3>
-                    <span className="text-xs font-bold text-black bg-white border border-ink-border px-2 py-0.5 rounded">CGPA 9.27</span>
+                    <span className="text-xs font-bold text-black bg-white border border-ink-border px-2 py-0.5 rounded">CGPA 9.24</span>
                   </div>
                   <p className="text-xs text-ink-muted">BSc in Computer Systems &amp; Design • Anna University</p>
                   <p className="text-xs text-black font-mono mt-1">June, 2025 | Coimbatore, India</p>

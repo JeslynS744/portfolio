@@ -18,7 +18,7 @@ export default function Education() {
       institution: 'PSG College of Technology',
       university: 'Anna University',
       completion: 'June, 2025',
-      score: 'CGPA: 9.27',
+      score: 'CGPA: 9.24',
       isStar: true,
       highlight: '🏆 Best Outgoing Student of CSD (2025 Batch)',
     },
@@ -129,7 +129,7 @@ export default function Education() {
               <div className="p-4 rounded-xl bg-canvas-subtle border border-ink-border space-y-2">
                 <span className="text-xs font-bold text-black block">Award Criteria &amp; Distinction:</span>
                 <p className="text-xs sm:text-sm text-ink-muted leading-relaxed font-normal">
-                  Awarded for highest academic distinction (<strong className="text-black font-semibold">9.27 CGPA</strong>) and overall excellence in the Department of Computer Systems and Design.
+                  Awarded for highest academic distinction (<strong className="text-black font-semibold">9.24 CGPA</strong>) and overall excellence in the Department of Computer Systems and Design.
                 </p>
               </div>
 

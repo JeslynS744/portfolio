@@ -98,7 +98,7 @@ export default function Hero() {
                 During my tenure at <strong className="text-black font-semibold">Light Mechanics</strong> in Bengaluru, I engineered core laser-solution applications for Special Purpose Machines (SPMs) — establishing low-latency, deterministic communication between user interfaces, Microsoft SQL Server databases, industrial PLCs, and third-party Manufacturing Execution Systems (MES) using C# and WPF.
               </p>
               <p>
-                I graduated with a <strong className="text-black font-semibold">BSc in Computer Systems and Design</strong> from <strong className="text-black font-semibold">PSG College of Technology</strong> (Anna University) with a <strong className="text-black font-semibold">9.27 CGPA</strong>, honored as the <strong className="text-black font-semibold">Best Outgoing Student of CSD (2025 Batch)</strong>. Currently, I am expanding my statistical modeling expertise through an <strong className="text-black font-semibold">MSc in Data Science</strong> at KPR College.
+                I graduated with a <strong className="text-black font-semibold">BSc in Computer Systems and Design</strong> from <strong className="text-black font-semibold">PSG College of Technology</strong> (Anna University) with a <strong className="text-black font-semibold">9.24 CGPA</strong>, honored as the <strong className="text-black font-semibold">Best Outgoing Student of CSD (2025 Batch)</strong>. Currently, I am expanding my statistical modeling expertise through an <strong className="text-black font-semibold">MSc in Data Science</strong> at KPR College.
               </p>
             </div>
 
@@ -140,7 +140,7 @@ export default function Hero() {
             {/* Highlight Badges / Micro Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-ink-border">
               <div className="p-4 rounded-xl bg-white border border-ink-border">
-                <div className="text-2xl font-black text-black">9.27</div>
+                <div className="text-2xl font-black text-black">9.24</div>
                 <div className="text-xs text-ink-muted mt-1">BSc CSD CGPA (PSG Tech)</div>
               </div>
               <div className="p-4 rounded-xl bg-white border border-ink-border">
