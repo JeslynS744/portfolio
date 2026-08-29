@@ -1,60 +1,61 @@
 'use client';
 
 import React from 'react';
-import { Award, CheckCircle2, ShieldCheck, ExternalLink, Sparkles, Layers, Terminal, BookOpen } from 'lucide-react';
+import { Award, CheckCircle2, ShieldCheck, Trophy, Sparkles, Layers, Terminal, BookOpen } from 'lucide-react';
 
 export interface CertificationItem {
   id: string;
   title: string;
   issuer: string;
   domain: string;
-  date?: string;
   icon: React.ElementType;
   skills: string[];
   description: string;
+  isHonor?: boolean;
 }
 
 export default function Certifications() {
   const certifications: CertificationItem[] = [
     {
+      id: 'best-outgoing-student',
+      title: 'Best Outgoing Student of CSD (2025 Batch)',
+      issuer: 'PSG College of Technology',
+      domain: 'Institutional Honor & Academic Leadership',
+      icon: Trophy,
+      isHonor: true,
+      skills: ['Academic Excellence', 'Technical Leadership', '9.27 CGPA', 'Computer Systems & Design'],
+      description:
+        'Awarded premier institutional recognition for outstanding academic performance, exemplary project delivery, and leadership in the Department of Computer Systems and Design at PSG Tech.',
+    },
+    {
+      id: 'infosys-springboard',
+      title: 'Data Science & Data Structures and Algorithms',
+      issuer: 'Infosys Springboard Certification',
+      domain: 'Data Science & Algorithms',
+      icon: Sparkles,
+      skills: ['Data Science', 'Data Structures & Algorithms', 'Python', 'Statistical Problem Solving'],
+      description:
+        'Certified credential verifying deep foundations in algorithmic complexity, core data structures, and statistical machine learning workflows.',
+    },
+    {
       id: 'figma-uiux',
-      title: 'Figma UI/UX Design Professional',
-      issuer: 'Udemy Professional Certification',
+      title: 'Figma UI/UX Design',
+      issuer: 'Udemy',
       domain: 'UI/UX & Design Systems',
       icon: Layers,
-      skills: ['Figma Components', 'Auto-Layout', 'Design Systems', 'Interactive Prototyping', 'User Research'],
+      skills: ['Figma', 'UI/UX Prototyping', 'Auto-Layout', 'Design Systems', 'User Interfaces'],
       description:
-        'Comprehensive training in creating scalable design systems, responsive component libraries, wireframing, and interactive high-fidelity web/mobile prototypes.',
+        'Comprehensive training in creating scalable design systems, responsive component libraries, wireframing, and interactive web and mobile prototypes.',
     },
     {
       id: 'fullstack-dev',
-      title: 'Full Stack Web Development',
-      issuer: 'Intern Ezy',
-      domain: 'Web Engineering & APIs',
+      title: 'Full Stack Development',
+      issuer: 'InternEzy',
+      domain: 'Web Engineering & Architecture',
       icon: Terminal,
-      skills: ['Full Stack Architecture', 'REST APIs', 'Database Integration', 'Responsive Layouts', 'Git Workflow'],
+      skills: ['Full Stack Development', 'React', 'JavaScript', 'HTML5 & CSS3', 'REST APIs'],
       description:
-        'Hands-on engineering covering client-server architectures, database integration, API endpoints, modern frontend state management, and production deployments.',
-    },
-    {
-      id: 'child-psychology',
-      title: 'Child Psychology & Behavioral Studies',
-      issuer: 'Specialized Behavioral Studies',
-      domain: 'Cognitive Science & Psychology',
-      icon: BookOpen,
-      skills: ['Cognitive Learning Curves', 'Behavioral Patterns', 'Stress Indicators', 'Human-Centric Design'],
-      description:
-        'Specialized coursework in cognitive development, psychometrics, and behavioral patterns — directly informing human-centric design and research in student data clustering.',
-    },
-    {
-      id: 'data-science-ml',
-      title: 'Data Science & Machine Learning Foundations',
-      issuer: 'Academic & Applied Research Program',
-      domain: 'Machine Learning & Analytics',
-      icon: Sparkles,
-      skills: ['K-Means Clustering', 'Principal Component Analysis (PCA)', 'Scikit-Learn', 'Statistical Inference'],
-      description:
-        'Rigorous applied training and academic research in high-dimensional data clustering, unsupervised feature reduction, and predictive modeling.',
+        'Hands-on engineering covering client-server architectures, database integration, RESTful API endpoints, and production web deployment.',
     },
   ];
 
@@ -65,13 +66,13 @@ export default function Certifications() {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-black text-xs font-mono font-semibold border border-ink-border">
             <Award className="w-3.5 h-3.5" />
-            <span>Verified Credentials</span>
+            <span>Certificates &amp; Achievements</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
-            Professional Certifications &amp; Credentials
+            Certifications &amp; Achievements
           </h2>
           <p className="text-ink-muted text-base">
-            Verified certifications spanning UI/UX design systems, full-stack web engineering, and cognitive data analytics.
+            Verified professional credentials and institutional honors directly listed in resume.
           </p>
         </div>
 
@@ -82,13 +83,17 @@ export default function Certifications() {
             return (
               <div
                 key={cert.id}
-                className="glass-card glass-card-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between"
+                className={`glass-card glass-card-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between ${
+                  cert.isHonor ? 'border-black shadow-md' : ''
+                }`}
               >
                 <div className="space-y-4">
                   {/* Card Header */}
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex items-center gap-3.5">
-                      <div className="p-3 rounded-xl bg-canvas-subtle border border-ink-border text-black">
+                      <div className={`p-3 rounded-xl border border-ink-border text-black ${
+                        cert.isHonor ? 'bg-black text-white' : 'bg-canvas-subtle'
+                      }`}>
                         <Icon className="w-6 h-6" />
                       </div>
                       <div>
@@ -131,7 +136,7 @@ export default function Certifications() {
                   <span className="flex items-center gap-1.5 text-black font-semibold">
                     <CheckCircle2 className="w-4 h-4 text-black" /> Verified Credential
                   </span>
-                  <span className="font-mono text-[11px]">Completed</span>
+                  <span className="font-mono text-[11px]">Active Credential</span>
                 </div>
               </div>
             );

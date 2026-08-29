@@ -13,9 +13,8 @@ export default function Experience() {
       type: 'Full-time',
       icon: Cpu,
       bullets: [
-        'Developed core laser-solution applications for Special Purpose Machines (SPMs).',
-        'Engineered seamless, low-latency communication between user interfaces, databases, industrial PLCs, and third-party MES platforms.',
-        'Built robust automation flows using C#, WPF, and Microsoft SQL Server.',
+        'Developed laser solution applications for SPMs, optimized seamless communication between software interfaces, database, PLC and third party MES platforms.',
+        'Architected reliable industrial database integration and real-time machine telemetry on Microsoft SQL Server with C# and WPF.',
       ],
       skills: ['C#', 'WPF', 'MS SQL Server', 'Industrial PLC', 'SPM Integration', 'MES Communication'],
     },
@@ -27,8 +26,8 @@ export default function Experience() {
       type: 'Internship',
       icon: Layout,
       bullets: [
-        'Created the responsive frontend interface for Tyeel, a digital platform for farmers.',
-        'Implemented cross-browser compatible layouts using HTML5, CSS, Bootstrap, and JavaScript.',
+        'Designed a responsive frontend for Tyeel (farmers\' platform) using HTML5, CSS, Bootstrap, JavaScript.',
+        'Ensured cross-browser responsiveness and intuitive design workflows for agrarian web interfaces.',
       ],
       skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'UI/UX Design', 'Cross-Browser Testing'],
     },

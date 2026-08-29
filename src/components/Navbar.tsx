@@ -73,14 +73,14 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
         </a>
 
         {/* Desktop Navigation Anchors */}
-        <nav className="hidden lg:flex items-center gap-1 text-xs font-semibold">
+        <nav className="hidden lg:flex items-center gap-0.5 text-xs font-semibold">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href;
             return (
               <a
                 key={link.name}
                 href={link.href}
-                className={`px-3.5 py-1.5 rounded-full transition-all duration-150 ${
+                className={`px-2.5 py-1.5 rounded-full transition-all duration-150 ${
                   isActive
                     ? 'text-white bg-black font-bold'
                     : 'text-ink-muted hover:text-black hover:bg-canvas-subtle'

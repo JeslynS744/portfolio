@@ -160,10 +160,10 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             {/* Professional Summary */}
             <div className="space-y-2">
               <h2 className="text-xs font-bold tracking-wider uppercase text-black border-b border-ink-border pb-1">
-                Professional Summary
+                Summary
               </h2>
               <p className="text-xs sm:text-sm text-ink-muted leading-relaxed font-normal">
-                High-achieving Software Engineer and Data Science Specialist with practical industry experience in industrial automation (C#, WPF, MS SQL Server, PLC, MES), full-stack web architectures, and predictive machine learning models. Graduated as Best Outgoing Student of Computer Systems and Design (PSG College of Technology, 9.27 CGPA).
+                MSc Data Science candidate at KPR College of Arts, Science and Research, focusing on machine learning, statistical analysis, and data-driven problem solving. Brings a strong technical foundation from 1 year of prior software development experience, with working knowledge of SQL and databases. Passionate about applying data science and analytics to build intelligent, data-driven solutions.
               </p>
             </div>
 
@@ -176,25 +176,22 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               <div className="space-y-4 text-xs sm:text-sm">
                 <div className="border-l-2 border-black pl-4 space-y-1">
                   <div className="flex justify-between items-baseline font-bold text-black">
-                    <span>Software Engineer — Light Mechanics</span>
-                    <span className="font-mono text-xs text-ink-muted font-normal">June 2025 – July 2026 | Bengaluru</span>
+                    <span>Software Engineer — Light Mechanics, Bengaluru</span>
+                    <span className="font-mono text-xs text-ink-muted font-normal">June, 2025 – July, 2026</span>
                   </div>
-                  <ul className="list-disc list-inside mt-1 space-y-1 text-ink-muted">
-                    <li>Developed core laser-solution applications for Special Purpose Machines (SPMs).</li>
-                    <li>Engineered low-latency communication between user interfaces, databases, industrial PLCs, and third-party MES platforms using C# and WPF.</li>
-                    <li>Architected reliable industrial database integration on Microsoft SQL Server.</li>
-                  </ul>
+                  <p className="text-ink-muted mt-1">
+                    Developed laser solution applications for SPMs, optimized seamless communication between software interfaces, database, PLC and third party MES platforms.
+                  </p>
                 </div>
 
                 <div className="border-l-2 border-ink-border pl-4 space-y-1">
                   <div className="flex justify-between items-baseline font-bold text-black">
-                    <span>Web Design Intern — Team Tweaks Technologies</span>
-                    <span className="font-mono text-xs text-ink-muted font-normal">June 2024 | Chennai</span>
+                    <span>Web Design Intern — Team Tweaks Technologies, Chennai</span>
+                    <span className="font-mono text-xs text-ink-muted font-normal">June, 2024</span>
                   </div>
-                  <ul className="list-disc list-inside mt-1 space-y-1 text-ink-muted">
-                    <li>Created responsive frontend interface for Tyeel, a digital platform for farmers.</li>
-                    <li>Ensured cross-browser responsiveness using HTML5, CSS3, Bootstrap, and JavaScript.</li>
-                  </ul>
+                  <p className="text-ink-muted mt-1">
+                    Designed a responsive frontend for Tyeel (farmers' platform) using HTML5, CSS, Bootstrap, JavaScript.
+                  </p>
                 </div>
               </div>
             </div>
@@ -202,47 +199,37 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             {/* Technical Projects */}
             <div className="space-y-4">
               <h2 className="text-xs font-bold tracking-wider uppercase text-black border-b border-ink-border pb-1 flex items-center gap-2">
-                <Code className="w-4 h-4" /> Technical Projects
+                <Code className="w-4 h-4" /> Projects
               </h2>
 
               <div className="space-y-3 text-xs sm:text-sm">
                 <div>
                   <div className="flex justify-between font-bold text-black">
-                    <span>Rapid Remit – International Banking &amp; Remittance Platform (PHP, MySQL, Render)</span>
-                    <span className="font-mono text-xs text-ink-muted font-normal">rapid-remit.onrender.com</span>
+                    <span>Rapid-Remit</span>
+                    <span className="font-mono text-xs text-ink-muted font-normal">PHP &amp; PDO</span>
                   </div>
                   <p className="text-ink-muted mt-0.5">
-                    Secure cross-border transactional banking and remittance portal featuring ACID-compliant ledger transactions, multi-currency processing, and administrative dashboards.
+                    Built a full-stack currency remittance platform using PHP and PDO with dual-database support with SQLite fallback for cloud deployment, integrating a real-time exchange rate API.
                   </p>
                 </div>
 
                 <div>
                   <div className="flex justify-between font-bold text-black">
-                    <span>WorkforcePulse – User Telemetry &amp; Analytics Dashboard (React, MongoDB, Docker, Render)</span>
-                    <span className="font-mono text-xs text-ink-muted font-normal">workforceplus.onrender.com</span>
+                    <span>WorkforcePulse</span>
+                    <span className="font-mono text-xs text-ink-muted font-normal">React, Node.js, MongoDB, Docker</span>
                   </div>
                   <p className="text-ink-muted mt-0.5">
-                    Containerized workforce analytics dashboard featuring real-time demographic metrics, MongoDB aggregation pipelines, and interactive reporting.
+                    Developed a full-stack workforce analytics dashboard using React, Node.js/Express, and MongoDB, with Docker-based containerization.
                   </p>
                 </div>
 
                 <div>
                   <div className="flex justify-between font-bold text-black">
-                    <span>Student CBT Distortion Analytics – ML Research (Python, PCA, K-Means)</span>
-                    <span className="font-mono text-xs text-ink-muted font-normal">Final Year Project</span>
+                    <span>Student CBT Distortion Analytics</span>
+                    <span className="font-mono text-xs text-ink-muted font-normal">Machine Learning &amp; Mental Health</span>
                   </div>
                   <p className="text-ink-muted mt-0.5">
-                    Final year research project applying unsupervised Machine Learning, PCA dimensionality reduction, and K-Means clustering to analyze student cognitive behavioral distortions.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex justify-between font-bold text-black">
-                    <span>Frontend Web Systems &amp; Industry Internship Projects (HTML5, CSS3, JS, Bootstrap)</span>
-                    <span className="font-mono text-xs text-ink-muted font-normal">github.com/JeslynS744/internship_projects</span>
-                  </div>
-                  <p className="text-ink-muted mt-0.5">
-                    Collection of responsive frontend architectures and web platforms engineered during industry internship, including digital systems like Tyeel.
+                    Applied machine learning to identify cognitive distortion patterns in students for early mental health risk screening, informing recommendations like automated campus screening and CBT-based intervention design.
                   </p>
                 </div>
               </div>
@@ -254,48 +241,64 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 <BookOpen className="w-4 h-4" /> Education
               </h2>
               
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                 <div className="bg-canvas-subtle p-4 rounded-xl border border-ink-border">
-                  <h3 className="font-bold text-black text-sm">MSc in Data Science</h3>
-                  <p className="text-xs text-ink-muted mt-1">KPR College of Arts, Science and Research</p>
-                  <p className="text-xs text-black font-mono mt-2">Bharathiar University | July 2026</p>
+                  <h3 className="font-bold text-black">KPR College of Arts, Science and Research</h3>
+                  <p className="text-xs text-ink-muted">MSc in Data Science • Bharathiar University</p>
+                  <p className="text-xs text-black font-mono mt-1">July, 2026 | Coimbatore, India</p>
                 </div>
 
                 <div className="bg-canvas-subtle p-4 rounded-xl border border-ink-border">
                   <div className="flex justify-between items-start">
-                    <h3 className="font-bold text-black text-sm">BSc in Computer Systems &amp; Design</h3>
+                    <h3 className="font-bold text-black">PSG College of Technology</h3>
                     <span className="text-xs font-bold text-black bg-white border border-ink-border px-2 py-0.5 rounded">CGPA 9.27</span>
                   </div>
-                  <p className="text-xs text-ink-muted mt-1">PSG College of Technology (Anna Univ.)</p>
-                  <p className="text-xs text-black font-semibold mt-2">🏆 Best Outgoing Student (2025 Batch)</p>
+                  <p className="text-xs text-ink-muted">BSc in Computer Systems &amp; Design • Anna University</p>
+                  <p className="text-xs text-black font-mono mt-1">June, 2025 | Coimbatore, India</p>
+                </div>
+
+                <div className="bg-canvas-subtle p-3 rounded-xl border border-ink-border">
+                  <div className="flex justify-between">
+                    <h3 className="font-bold text-black text-xs">Carmel Garden Matriculation HSS</h3>
+                    <span className="text-xs font-mono font-bold">95.16%</span>
+                  </div>
+                  <p className="text-[11px] text-ink-muted">HSC • State Board | May, 2022</p>
+                </div>
+
+                <div className="bg-canvas-subtle p-3 rounded-xl border border-ink-border">
+                  <div className="flex justify-between">
+                    <h3 className="font-bold text-black text-xs">St. Joseph's Matriculation HSS</h3>
+                    <span className="text-xs font-mono font-bold">85.6%</span>
+                  </div>
+                  <p className="text-[11px] text-ink-muted">SSLC • State Board | March, 2020</p>
                 </div>
               </div>
             </div>
 
-            {/* Key Skills & Honors */}
+            {/* Technical Skills & Certificates */}
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <h2 className="text-xs font-bold tracking-wider uppercase text-black border-b border-ink-border pb-1 mb-3 flex items-center gap-2">
-                  <Code className="w-4 h-4" /> Technical Stack
+                  <Code className="w-4 h-4" /> Technical Skills
                 </h2>
-                <div className="flex flex-wrap gap-1.5">
-                  {['React', 'C#', 'WPF', 'Python', 'Machine Learning', 'SQL Server', 'MongoDB', 'Next.js', 'Tailwind CSS', 'Docker', 'Power BI', 'C++', 'PHP'].map((skill) => (
-                    <span key={skill} className="text-xs bg-canvas-subtle text-black px-2.5 py-1 rounded-md border border-ink-border">
-                      {skill}
-                    </span>
-                  ))}
+                <div className="space-y-2 text-xs text-ink-muted">
+                  <p><strong className="text-black">Web Dev:</strong> HTML, CSS, JavaScript, React, .NET</p>
+                  <p><strong className="text-black">Languages:</strong> Python, C, C#</p>
+                  <p><strong className="text-black">Data Science &amp; ML:</strong> Data structures, Pandas, NumPy, Matplotlib, Power BI Reporting</p>
+                  <p><strong className="text-black">Data Storage:</strong> SQL server, MySQL, SQLite, MongoDB(Atlas)</p>
+                  <p><strong className="text-black">Tools:</strong> Docker, Figma</p>
                 </div>
               </div>
 
               <div>
                 <h2 className="text-xs font-bold tracking-wider uppercase text-black border-b border-ink-border pb-1 mb-3 flex items-center gap-2">
-                  <Award className="w-4 h-4" /> Honors &amp; Certifications
+                  <Award className="w-4 h-4" /> Certificates &amp; Achievements
                 </h2>
                 <ul className="text-xs text-ink-muted space-y-1.5">
-                  <li className="font-bold text-black">🏆 Best Outgoing Student of CSD (2025 Batch) - PSG Tech</li>
-                  <li>• Figma UI/UX Design (Udemy)</li>
-                  <li>• Full Stack Development (Intern Ezy)</li>
-                  <li>• Child Psychology Certification</li>
+                  <li className="font-bold text-black">🏆 Best Outgoing Student of CSD 2025 Batch at PSG Tech</li>
+                  <li>• Infosys Springboard Certification on Data Science and Data Structures &amp; Algorithms</li>
+                  <li>• Figma UI/UX Design - Udemy</li>
+                  <li>• Full Stack Development - InternEzy</li>
                 </ul>
               </div>
             </div>

@@ -1,41 +1,54 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Layout, Server, Database, Cloud, Brain, CheckCircle, Sparkles } from 'lucide-react';
+import { Layout, Code2, Database, Brain, Wrench, HeartHandshake, Sparkles } from 'lucide-react';
 
 export default function Skills() {
   const [activeTab, setActiveTab] = useState<string>('all');
 
   const categories = [
     {
-      id: 'frontend',
-      title: 'Frontend & UI/UX',
+      id: 'web',
+      title: 'Web Development',
       icon: Layout,
-      skills: ['React', 'HTML5', 'CSS3', 'JavaScript', 'WPF', 'WinForms', 'Bootstrap', 'Tailwind CSS', 'Figma'],
+      skills: ['HTML5', 'CSS3', 'JavaScript', 'React', '.NET', 'Bootstrap'],
     },
     {
-      id: 'backend',
-      title: 'Backend & Core Systems',
-      icon: Server,
-      skills: ['C#', 'Python', 'C', 'C++', 'PHP'],
+      id: 'languages',
+      title: 'Programming Languages',
+      icon: Code2,
+      skills: ['Python', 'C', 'C#'],
     },
     {
-      id: 'database',
-      title: 'Databases & Relational Modeling',
-      icon: Database,
-      skills: ['Microsoft SQL Server', 'MongoDB', 'phpMyAdmin', 'Data Structures'],
-    },
-    {
-      id: 'cloud',
-      title: 'Cloud, ETL & Analytics',
-      icon: Cloud,
-      skills: ['Azure Data Factory', 'Azure Synapse Pipelines', 'MS Power BI', 'Recharts', 'Docker'],
-    },
-    {
-      id: 'ml',
-      title: 'Machine Learning & Automation',
+      id: 'datascience',
+      title: 'Data Science & ML',
       icon: Brain,
-      skills: ['K-Means', 'Supervised Classification', 'Data Analytics', 'Industrial PLC / SPM Integration'],
+      skills: ['Data Structures', 'Pandas', 'NumPy', 'Matplotlib', 'Power BI Reporting', 'Predictive Modeling'],
+    },
+    {
+      id: 'storage',
+      title: 'Data Storage & Databases',
+      icon: Database,
+      skills: ['SQL Server', 'MySQL', 'SQLite', 'MongoDB (Atlas)'],
+    },
+    {
+      id: 'tools',
+      title: 'Tools & DevOps',
+      icon: Wrench,
+      skills: ['Docker', 'Figma', 'Git / GitHub'],
+    },
+    {
+      id: 'interests',
+      title: 'Areas of Interest',
+      icon: HeartHandshake,
+      skills: [
+        'Data Analysis & Visualization',
+        'Machine Learning & Predictive Modeling',
+        'Front-End Development',
+        'Cloud Computing',
+        'UI/UX Design',
+        'Behavioral Psychology',
+      ],
     },
   ];
 
@@ -52,10 +65,10 @@ export default function Skills() {
             <span>Technical Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
-            Comprehensive Skills Matrix
+            Technical Skills &amp; Competencies
           </h2>
           <p className="text-ink-muted text-base">
-            Structured skill stack spanning full-stack web architectures, industrial laser automation, database modeling, and ML data pipelines.
+            Proficiencies across full-stack web engineering, programming languages, machine learning data pipelines, and database storage.
           </p>
 
           {/* Filter Tabs */}
@@ -68,7 +81,7 @@ export default function Skills() {
                   : 'bg-white text-ink-muted hover:text-black border border-ink-border'
               }`}
             >
-              All Domains
+              All Skills
             </button>
             {categories.map((cat) => (
               <button
@@ -93,32 +106,24 @@ export default function Skills() {
             return (
               <div
                 key={cat.id}
-                className="glass-card glass-card-hover rounded-2xl p-6 sm:p-7 flex flex-col justify-between"
+                className="glass-card glass-card-hover rounded-2xl p-6 sm:p-7 space-y-5"
               >
-                <div>
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-3 rounded-xl bg-canvas-subtle border border-ink-border text-black">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-lg font-bold text-black">{cat.title}</h3>
+                <div className="flex items-center gap-3">
+                  <div className="p-3 rounded-xl bg-canvas-subtle border border-ink-border text-black">
+                    <Icon className="w-5 h-5" />
                   </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {cat.skills.map((skill) => (
-                      <div
-                        key={skill}
-                        className="flex items-center gap-2 px-3 py-2 rounded-xl bg-canvas-subtle border border-ink-border text-black text-xs font-medium"
-                      >
-                        <CheckCircle className="w-3.5 h-3.5 text-black shrink-0" />
-                        <span>{skill}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <h3 className="text-base font-bold text-black">{cat.title}</h3>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-ink-border text-[11px] text-ink-muted font-mono flex items-center justify-between">
-                  <span>{cat.skills.length} Competencies</span>
-                  <span className="text-black font-bold">Production Ready</span>
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1.5 rounded-lg text-xs font-medium bg-canvas-subtle text-black border border-ink-border hover:border-black transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
             );
