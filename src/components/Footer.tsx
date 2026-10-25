@@ -64,7 +64,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-8 text-center text-[11px] text-ink-muted border-t border-ink-border pt-6">
-        &copy; {new Date().getFullYear()} Jeslyn Nivedhitha S. Monochromatic Portfolio &amp; Technical Blog.
+        &copy; {new Date().getFullYear()} Jeslyn Nivedhitha S
       </div>
     </footer>
   );
