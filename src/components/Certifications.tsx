@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Award, ShieldCheck, FolderArchive, FileText, ArrowRight } from 'lucide-react';
+import { Award, ShieldCheck, FolderArchive, ArrowRight } from 'lucide-react';
 import CertificateVaultModal from '@/components/CertificateVaultModal';
 import { CertificateDoc } from '@/app/api/certificates/route';
 
@@ -48,58 +48,42 @@ export default function Certifications() {
 
         {/* Central Vault Card */}
         <div className="max-w-4xl mx-auto">
-          <div className="glass-card rounded-3xl p-8 sm:p-12 border border-ink-border shadow-xl bg-white relative overflow-hidden">
+          <div className="glass-card rounded-3xl p-8 sm:p-12 border border-ink-border shadow-xl bg-white relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             {/* Background subtle watermark / accent */}
             <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-canvas-subtle border border-ink-border/40 pointer-events-none flex items-center justify-center opacity-40">
               <ShieldCheck className="w-24 h-24 text-ink-muted/30" />
             </div>
 
-            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-              <div className="space-y-4 max-w-xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-canvas-subtle border border-ink-border text-xs font-mono font-semibold text-black">
-                  <ShieldCheck className="w-4 h-4 text-black" />
-                  <span>Verified Document Repository</span>
-                  <span>•</span>
-                  <span>{documents.length} Files</span>
-                </div>
-
-                <h3 className="text-2xl sm:text-3xl font-bold text-black tracking-tight">
-                  Academic Honors &amp; Technical Credentials
-                </h3>
-
-                <p className="text-sm sm:text-base text-ink-muted leading-relaxed">
-                  Direct access to institutional awards and verified credentials including the <strong className="text-black font-semibold">Best Outgoing Student Award (PSG College of Technology)</strong>, <strong className="text-black font-semibold">Infosys Springboard Data Science &amp; Algorithms</strong> certifications, <strong className="text-black font-semibold">Full Stack Engineering</strong>, and <strong className="text-black font-semibold">UI/UX Design</strong>.
-                </p>
-
-                {/* Document Tags */}
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {documents.map((doc) => (
-                    <button
-                      key={doc.filename}
-                      onClick={() => setVaultOpen(true)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-canvas-subtle hover:bg-canvas border border-ink-border text-xs font-medium text-black transition-colors group cursor-pointer"
-                    >
-                      <FileText className="w-3.5 h-3.5 text-ink-muted group-hover:text-black" />
-                      <span>{doc.title}</span>
-                    </button>
-                  ))}
-                </div>
+            <div className="space-y-4 max-w-xl relative z-10">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-canvas-subtle border border-ink-border text-xs font-mono font-semibold text-black">
+                <ShieldCheck className="w-4 h-4 text-black" />
+                <span>Verified Repository</span>
+                <span>•</span>
+                <span>{documents.length} Documents</span>
               </div>
 
-              {/* Action Button */}
-              <div className="w-full md:w-auto flex-shrink-0 flex flex-col items-center sm:items-start md:items-end gap-3">
-                <button
-                  onClick={() => setVaultOpen(true)}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-black hover:bg-neutral-800 text-white font-bold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl group"
-                >
-                  <FolderArchive className="w-5 h-5 text-white" />
-                  <span>Open Certificate Vault</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <span className="text-[11px] font-mono text-ink-muted">
-                  Interactive PDF preview &amp; download
-                </span>
-              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Academic Honors &amp; Technical Credentials
+              </h3>
+
+              <p className="text-sm sm:text-base text-ink-muted leading-relaxed">
+                Explore all verified credentials, academic leadership awards, and technical certifications inside the interactive document vault.
+              </p>
+            </div>
+
+            {/* Action Button */}
+            <div className="w-full md:w-auto flex-shrink-0 flex flex-col items-center sm:items-start md:items-end gap-3 relative z-10">
+              <button
+                onClick={() => setVaultOpen(true)}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-black hover:bg-neutral-800 text-white font-bold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl group"
+              >
+                <FolderArchive className="w-5 h-5 text-white" />
+                <span>Open Certificate Vault</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <span className="text-[11px] font-mono text-ink-muted">
+                Interactive PDF preview &amp; download
+              </span>
             </div>
           </div>
         </div>
