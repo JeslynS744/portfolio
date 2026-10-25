@@ -22,7 +22,7 @@ export default function Experience() {
       role: 'Web Design Intern',
       company: 'Team Tweaks Technologies',
       location: 'Chennai',
-      period: 'June 2024',
+      period: 'Jun 2024 – Jul 2024',
       type: 'Internship',
       icon: Layout,
       bullets: [

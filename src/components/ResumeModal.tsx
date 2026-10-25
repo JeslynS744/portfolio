@@ -185,7 +185,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 <div className="border-l-2 border-ink-border pl-4 space-y-1">
                   <div className="flex justify-between items-baseline font-bold text-black">
                     <span>Web Design Intern — Team Tweaks Technologies, Chennai</span>
-                    <span className="font-mono text-xs text-ink-muted font-normal">June, 2024</span>
+                    <span className="font-mono text-xs text-ink-muted font-normal">Jun 2024 – Jul 2024</span>
                   </div>
                   <p className="text-ink-muted mt-1">
                     Designed a responsive frontend for Tyeel (farmers' platform) using HTML5, CSS, Bootstrap, JavaScript.
