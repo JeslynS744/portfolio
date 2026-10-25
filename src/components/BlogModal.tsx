@@ -107,12 +107,13 @@ export default function BlogModal({ article, onClose }: BlogModalProps) {
 
             {/* Optional Banner Image */}
             {article.image && (
-              <div className="relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden bg-canvas-subtle border border-ink-border shadow-sm my-4">
+              <div className="relative w-full aspect-square max-w-2xl mx-auto rounded-2xl overflow-hidden bg-neutral-900/5 border border-ink-border shadow-sm my-6 flex items-center justify-center p-2 sm:p-4">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain object-center rounded-xl"
+                  priority
                 />
               </div>
             )}

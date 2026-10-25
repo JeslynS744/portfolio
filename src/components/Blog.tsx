@@ -119,19 +119,15 @@ export default function Blog() {
               {article.image && (
                 <div 
                   onClick={() => setSelectedArticle(article)}
-                  className="relative h-60 sm:h-72 w-full overflow-hidden bg-canvas-subtle border-b border-ink-border cursor-pointer group"
+                  className="relative aspect-square w-full overflow-hidden bg-neutral-900/5 border-b border-ink-border cursor-pointer group flex items-center justify-center p-3 sm:p-4"
                 >
                   <Image
                     src={article.image}
                     alt={article.title}
                     fill
-                    className="object-cover object-center group-hover:scale-105 transition-all duration-500"
+                    className="object-contain object-center group-hover:scale-[1.02] transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-white/95 text-black border border-ink-border backdrop-blur-md shadow-sm">
-                      {article.category}
-                    </span>
-                  </div>
                 </div>
               )}
 
@@ -139,6 +135,9 @@ export default function Blog() {
               <div className="p-6 sm:p-8 space-y-4">
                 {/* Meta Header */}
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-ink-muted">
+                  <span className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full bg-canvas-subtle text-black border border-ink-border">
+                    {article.category}
+                  </span>
                   <div className="flex items-center gap-3 font-mono">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3.5 h-3.5" />
@@ -150,10 +149,6 @@ export default function Blog() {
                       {article.readTime}
                     </span>
                   </div>
-                  <span className="flex items-center gap-1 text-black font-semibold text-xs">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    Featured
-                  </span>
                 </div>
 
                 {/* Title */}
