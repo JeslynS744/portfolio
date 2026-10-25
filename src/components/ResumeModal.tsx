@@ -26,7 +26,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-sm overflow-y-auto print:p-0 print:bg-white">
-      <div 
+      <div
         className="relative w-full max-w-5xl bg-white border border-ink-border rounded-2xl shadow-2xl overflow-hidden my-6 max-h-[94vh] flex flex-col print:max-h-none print:border-none print:shadow-none animate-fade-in text-ink"
         onClick={(e) => e.stopPropagation()}
       >
@@ -44,22 +44,20 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             <div className="hidden sm:flex items-center p-1 bg-white border border-ink-border rounded-lg text-xs font-semibold">
               <button
                 onClick={() => setViewMode('pdf')}
-                className={`px-3 py-1 rounded-md transition-colors flex items-center gap-1.5 ${
-                  viewMode === 'pdf'
+                className={`px-3 py-1 rounded-md transition-colors flex items-center gap-1.5 ${viewMode === 'pdf'
                     ? 'bg-black text-white'
                     : 'text-ink-muted hover:text-black'
-                }`}
+                  }`}
               >
                 <FileText className="w-3.5 h-3.5" />
                 <span>PDF Document</span>
               </button>
               <button
                 onClick={() => setViewMode('web')}
-                className={`px-3 py-1 rounded-md transition-colors flex items-center gap-1.5 ${
-                  viewMode === 'web'
+                className={`px-3 py-1 rounded-md transition-colors flex items-center gap-1.5 ${viewMode === 'web'
                     ? 'bg-black text-white'
                     : 'text-ink-muted hover:text-black'
-                }`}
+                  }`}
               >
                 <Eye className="w-3.5 h-3.5" />
                 <span>Readable Web</span>
@@ -117,7 +115,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             />
           </div>
         ) : (
-          <div 
+          <div
             ref={resumeRef}
             className="flex-1 overflow-y-auto p-6 sm:p-12 text-ink space-y-8 bg-white print:p-8 selection:bg-black selection:text-white"
           >
@@ -240,7 +238,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               <h2 className="text-xs font-bold tracking-wider uppercase text-black border-b border-ink-border pb-1 flex items-center gap-2">
                 <BookOpen className="w-4 h-4" /> Education
               </h2>
-              
+
               <div className="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                 <div className="bg-canvas-subtle p-4 rounded-xl border border-ink-border">
                   <h3 className="font-bold text-black">KPR College of Arts, Science and Research</h3>

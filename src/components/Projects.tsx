@@ -10,6 +10,99 @@ export default function Projects() {
 
   const projectsList: ProjectData[] = [
     {
+      id: 'datascribe',
+      title: 'DataScribe – Conversational AI & Natural Language Database Analytics',
+      category: 'AI Engineering & Conversational Analytics',
+      tags: ['Python', 'Streamlit', 'Groq LLM', 'Text-to-SQL', 'SQLite', 'Voice AI', 'Data Viz'],
+      summary:
+        'Intelligent AI-powered conversational database engine enabling voice and natural language queries, automated schema inspection, dynamic SQL generation via Groq LLM, and real-time visualization.',
+      image: '/images/datascribe.jpg',
+      githubUrl: 'https://github.com/JeslynS744/DataScribe',
+      deployUrl: 'https://datascribe-dthr.onrender.com',
+      actionText: 'Live Demo',
+      highlights: [
+        'Integrated Groq LLM API for low-latency natural language to executable SQL query generation.',
+        'Built speech-to-text voice query interface with dynamic schema parsing and multi-database connectivity.',
+        'Engineered automated query validation pipelines ensuring safe execution across relational databases.',
+        'Implemented dynamic visualization engine auto-generating charts from query result sets.',
+      ],
+      architecture: [
+        'Frontend & UI: Streamlit + Responsive Theme Architecture',
+        'AI Engine: Groq LLM (High-throughput Text-to-SQL & NL Engine)',
+        'Database & Execution: SQLite / Relational Engine + Voice Input Widget',
+        'Live Deployment: Render Cloud (datascribe-dthr.onrender.com)',
+      ],
+    },
+    {
+      id: 'scrubbai',
+      title: 'ScrubbAI – Intelligent Automated Data Cleaning Platform',
+      category: 'Data Engineering & AI Automation',
+      tags: ['Python', 'Streamlit', 'Pandas', 'Data Cleaning', 'Scikit-Learn', 'Feature Engineering'],
+      summary:
+        'Automated data preprocessing suite utilizing statistical intelligence and heuristics to cleanse messy datasets, handle missing values, detect outliers, and profile column distributions.',
+      image: '/images/scrubbai.jpg',
+      githubUrl: 'https://github.com/JeslynS744/ScrubbAI',
+      deployUrl: 'https://scrubbai-blwmekdubt2ngr8xmj6akd.streamlit.app/',
+      actionText: 'Live Demo',
+      highlights: [
+        'Developed automated statistical profiling pipelines identifying missing values, skewness, and duplicates.',
+        'Implemented smart imputation algorithms (mean, median, mode, KNN) and adaptive outlier filtering.',
+        'Created interactive web interface on Streamlit with instantaneous tabular previews and downloadable clean datasets.',
+        'Built dataset health scoring algorithm providing overall quality indicators and data integrity metrics.',
+      ],
+      architecture: [
+        'App Framework: Streamlit Community Cloud',
+        'Processing Engine: Pandas, NumPy & Scikit-Learn',
+        'Data Pipeline: Automated Imputation, Deduplication & Type Casting',
+        'Live Deployment: Streamlit Cloud (scrubbai-blwmekdubt2ngr8xmj6akd.streamlit.app)',
+      ],
+    },
+    {
+      id: 'wine-qt',
+      title: 'WineQT – Wine Quality Prediction & Physicochemical Analysis',
+      category: 'Machine Learning & Predictive Modeling',
+      tags: ['Python', 'Machine Learning', 'Streamlit', 'Scikit-Learn', 'Random Forest', 'Render'],
+      summary:
+        'End-to-end predictive machine learning web application analyzing 11 physicochemical wine properties (acidity, alcohol, sulphates, pH) to classify and predict wine quality scores.',
+      image: '/images/wine-qt.jpg',
+      githubUrl: 'https://github.com/JeslynS744/Wine_QT',
+      deployUrl: 'https://wine-qt.onrender.com',
+      actionText: 'Live Demo',
+      highlights: [
+        'Trained and evaluated ensemble ML models (Random Forest, Gradient Boosting) achieving high predictive accuracy.',
+        'Engineered feature correlation heatmaps and importance rankings to uncover key chemical quality drivers like alcohol and volatile acidity.',
+        'Deployed interactive production inference app on Render with dynamic parameter sliders and real-time prediction dials.',
+        'Integrated robust input validation and confidence score intervals for each prediction.',
+      ],
+      architecture: [
+        'Model Architecture: Random Forest / Ensemble Classifiers via Scikit-Learn',
+        'Interface: Streamlit Interactive UI with Matplotlib/Seaborn heatmaps',
+        'Live Deployment: Render Cloud Web Service (wine-qt.onrender.com)',
+      ],
+    },
+    {
+      id: 'customer-segmentation',
+      title: 'Customer Segmentation & RFM Behavioral Clustering',
+      category: 'Machine Learning & Unsupervised Analytics',
+      tags: ['Python', 'K-Means', 'RFM Analysis', 'Scikit-Learn', 'Customer Analytics', 'Seaborn'],
+      summary:
+        'Unsupervised machine learning system leveraging RFM (Recency, Frequency, Monetary) metrics and K-Means clustering to discover customer archetypes and optimize marketing strategies.',
+      image: '/images/customer-segmentation.jpg',
+      githubUrl: 'https://github.com/JeslynS744/Customer_segmentation',
+      actionText: 'Project Details',
+      highlights: [
+        'Transformed transaction logs into multidimensional RFM matrices with logarithmic feature scaling.',
+        'Applied Elbow Method and Silhouette Scoring to identify optimal cluster counts (k) for customer segmentation.',
+        'Segmented users into distinct behavioral cohorts (Champions, Loyalists, Potential, At-Risk) with actionable insights.',
+        'Built rich 2D/3D PCA visualization pipelines communicating cohort spending patterns and retention risks.',
+      ],
+      architecture: [
+        'Algorithms: K-Means Clustering, PCA Dimensionality Reduction',
+        'Libraries: Scikit-learn, Pandas, NumPy, Matplotlib & Seaborn',
+        'Evaluation: Silhouette Analysis, Inertia Elbow Method, RFM Scoring',
+      ],
+    },
+    {
       id: 'rapid-remit',
       title: 'Rapid Remit – International Banking & Remittance Platform',
       category: 'Full-Stack & Financial Architecture',
@@ -30,29 +123,6 @@ export default function Projects() {
         'Backend: PHP 8 + Relational MySQL Database Engine',
         'Security: CSRF Tokens, Secure Sessions & Password Hashing',
         'Live Deployment: Render Cloud (rapid-remit.onrender.com)',
-      ],
-    },
-    {
-      id: 'workforce-pulse',
-      title: 'WorkforcePulse – User Telemetry & Analytics Dashboard',
-      category: 'Full-Stack & Cloud Analytics',
-      tags: ['React', 'MongoDB', 'Docker', 'Node.js', 'Analytics Pipelines', 'Recharts'],
-      summary:
-        'Containerized workforce analytics dashboard featuring real-time demographic metrics, MongoDB aggregation pipelines, and interactive reporting.',
-      image: '/images/user-info-stats.png',
-      githubUrl: 'https://github.com/JeslynS744/WorkforcePulse',
-      deployUrl: 'https://workforceplus.onrender.com/',
-      actionText: 'Live Demo',
-      highlights: [
-        'Engineered high-throughput aggregation pipelines in MongoDB for real-time user event tracking.',
-        'Built dynamic interactive charting widgets and KPIs with React 18 and Recharts.',
-        'Containerized services with Docker Compose for seamless cloud deployment on Render.',
-        'Optimized sub-second query rendering on demographic data streams.',
-      ],
-      architecture: [
-        'Frontend: React 18 + Recharts + Tailwind CSS',
-        'Backend & Database: Node.js API + MongoDB Aggregation Framework',
-        'Live Deployment: Containerized Docker on Render (workforceplus.onrender.com)',
       ],
     },
     {
@@ -133,7 +203,7 @@ export default function Projects() {
                     fill
                     className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
-                  
+
                   <span className="absolute top-4 left-4 px-3 py-1 text-[11px] font-bold tracking-wider uppercase rounded-full bg-white/95 text-black border border-ink-border backdrop-blur-md">
                     {project.category}
                   </span>

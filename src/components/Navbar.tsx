@@ -47,9 +47,8 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
-        scrolled ? 'glass-nav py-3 shadow-sm' : 'bg-transparent py-5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${scrolled ? 'glass-nav py-3 shadow-sm' : 'bg-transparent py-5'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand logo - Confident, Powerful Monochromatic Mark */}
@@ -80,11 +79,10 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
               <a
                 key={link.name}
                 href={link.href}
-                className={`px-2.5 py-1.5 rounded-full transition-all duration-150 ${
-                  isActive
+                className={`px-2.5 py-1.5 rounded-full transition-all duration-150 ${isActive
                     ? 'text-white bg-black font-bold'
                     : 'text-ink-muted hover:text-black hover:bg-canvas-subtle'
-                }`}
+                  }`}
               >
                 {link.name}
               </a>
@@ -146,9 +144,8 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`py-2 px-3 rounded-lg text-sm transition-colors flex items-center justify-between ${
-                  activeSection === link.href ? 'bg-black text-white font-bold' : 'hover:bg-canvas-subtle'
-                }`}
+                className={`py-2 px-3 rounded-lg text-sm transition-colors flex items-center justify-between ${activeSection === link.href ? 'bg-black text-white font-bold' : 'hover:bg-canvas-subtle'
+                  }`}
               >
                 <span>{link.name}</span>
                 {activeSection === link.href && (
