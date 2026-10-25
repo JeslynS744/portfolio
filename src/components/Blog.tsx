@@ -10,6 +10,46 @@ export default function Blog() {
 
   const articles: BlogArticle[] = [
     {
+      id: 'grokking-training-model-past-done',
+      title: 'Grokking: What happens when you train a model past “Done”',
+      category: 'Machine Learning & Deep Learning Insights',
+      date: 'Featured Essay',
+      readTime: '4 min read',
+      image: '/images/blog_2.jpg',
+      summary:
+        'Nobody sits a toddler down with a grammar book. Eventually, the word becomes instinct rather than an echo. In machine learning, that breakthrough is called grokking — what happens when a model trains past 100% memorization and unlocks true generalization.',
+      tags: ['Grokking', 'MachineLearning', 'TechReflections', 'StudentJourney'],
+      linkedInUrl: 'https://www.linkedin.com/in/jeslyn-nivedhitha-410701249/',
+      content: {
+        intro:
+          'Nobody sits a toddler down with a grammar book. They just hear the word "more." A second strawberry at snack time. Another push on the swing. An encore of their favourite song.\n\nAt first, they just parrot the sound. But eventually, a quiet shift happens. Without anyone defining the term, the child connects the dots. The word becomes an instinct rather than an echo. In machine learning, that breakthrough is called grokking.',
+        sections: [
+          {
+            heading: '1. The Eager Imitator vs. True Understanding',
+            body:
+              'When an AI model trains, it usually starts out as an eager imitator. It\'s like following a recipe to the letter. You know how to bake a cake if you have every exact ingredient in front of you. But the moment you run out of an ingredient, you can\'t adapt, because you learned a checklist instead of the art of cooking.\n\nThe model can repeat what it saw in its training data, but it doesn\'t actually understand the task.',
+          },
+          {
+            heading: '2. The Overfitting Myth & The Unexpected Breakthrough',
+            body:
+              'For years, researchers assumed that was pretty much the ceiling: feed a network data, watch it memorize the answers and stop training once it hits 100% accuracy. Continuing past that point was considered a recipe for overfitting.\n\nThen, researchers noticed something strange. If they kept running the training process for thousands of extra steps, long after the model had already memorized every piece of training data, the network suddenly underwent a quiet revolution. Out of nowhere, its ability to solve brand new, unseen problems shot from zero to near-perfect. The computer had stopped cramming for the test and finally learned the subject.',
+          },
+          {
+            heading: '3. Stranger in a Strange Land',
+            body:
+              'The word itself comes from Robert Heinlein\'s sci-fi classic, Stranger in a Strange Land, where "grok" means to understand something so intuitively that it merges with who you are.\n\nMachine learning adopted it because no other word quite captured that sudden leap from exhaustive search to genuine intuition.',
+          },
+          {
+            heading: '4. Two Distinct Waves of Learning',
+            body:
+              'This changes how we think about building AI. Memorization and true understanding are not the same thing. They happen in distinct waves.\n\nA model has to chew through the raw facts first, but if you let it sit with the problem long enough, it can discard the clutter and lock onto the underlying rule.',
+          },
+        ],
+        conclusion:
+          'Sometimes, real learning only begins after you think you\'re already done.',
+      },
+    },
+    {
       id: 'nursery-and-data-science',
       title: 'What a Nursery Taught Me About Data Science?',
       category: 'Data Science & Perspective',
@@ -64,12 +104,12 @@ export default function Blog() {
             Featured Essays &amp; Reflections
           </h2>
           <p className="text-ink-muted text-base">
-            Reflections on data science, human-centric systems, and technical journeys.
+            Reflections on data science, machine learning research, and human-centric systems.
           </p>
         </div>
 
-        {/* Featured Article Card */}
-        <div className="max-w-3xl mx-auto">
+        {/* Featured Articles Grid */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {articles.map((article) => (
             <div
               key={article.id}
@@ -144,20 +184,22 @@ export default function Blog() {
 
               {/* Action Buttons */}
               <div className="px-6 sm:px-8 py-4 bg-canvas-subtle border-t border-ink-border flex flex-wrap items-center justify-between gap-3">
-                <a
-                  href={article.linkedInUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-ink-muted hover:text-black transition-colors"
-                >
-                  <Linkedin className="w-4 h-4" />
-                  <span>View on LinkedIn</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
+                {article.linkedInUrl && (
+                  <a
+                    href={article.linkedInUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-ink-muted hover:text-black transition-colors"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    <span>View on LinkedIn</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
 
                 <button
                   onClick={() => setSelectedArticle(article)}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-black hover:bg-neutral-800 text-white font-bold text-xs sm:text-sm transition-all"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-black hover:bg-neutral-800 text-white font-bold text-xs sm:text-sm transition-all ml-auto"
                 >
                   <span>Read Full Essay</span>
                   <ArrowRight className="w-4 h-4" />

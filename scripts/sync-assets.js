@@ -50,4 +50,18 @@ if (fs.existsSync(rootResume)) {
   }
 }
 
-console.log('✓ Successfully synchronized resume and certificates to public assets.');
+// 3. Sync Blog Images
+const rootBlogImages = path.join(__dirname, '..', 'blog_images');
+const publicBlogImages = path.join(__dirname, '..', 'public', 'blog_images');
+const publicImages = path.join(__dirname, '..', 'public', 'images');
+syncFolder(rootBlogImages, publicBlogImages);
+if (fs.existsSync(rootBlogImages)) {
+  for (const file of fs.readdirSync(rootBlogImages)) {
+    const srcPath = path.join(rootBlogImages, file);
+    if (fs.statSync(srcPath).isFile()) {
+      fs.copyFileSync(srcPath, path.join(publicImages, file));
+    }
+  }
+}
+
+console.log('✓ Successfully synchronized resume, certificates, and blog images to public assets.');
